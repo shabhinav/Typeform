@@ -1,0 +1,47 @@
+@mixin optionsStyling {
+  background-color: #f5f5f5;
+  border: 1px dashed #f5f5f5;
+  text-align: center;
+  color: #929292;
+  font-size: 15px;
+  width: 60%;
+  padding: 10px 0px;
+  border: 1px dotted #c0c0c0;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.form {
+  text-align: center;
+}
+
+.input_ques {
+  border: none;
+  border-bottom: 1px dotted black;
+  width: 50%;
+  outline: none;
+  text-align: center;
+  &::placeholder {
+    text-align: center;
+  }
+}
+
+.add_options {
+  @include optionsStyling;
+}
+
+.choice {
+  @include optionsStyling;
+  border: 1px solid black;
+}
+.option {
+  @include optionsStyling;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+.delete_icon {
+  text-align: right;
+}

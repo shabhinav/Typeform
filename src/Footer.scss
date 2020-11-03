@@ -1,0 +1,52 @@
+.footer {
+  width: 60%;
+  margin: auto;
+  margin-top: 10em;
+}
+
+.footer_options {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.addmore_button {
+  color: white;
+  font-size: 12px;
+  background-color: #e59357;
+  border: none;
+  padding: 10px 10px;
+  font-weight: bolder;
+  outline: none;
+  &:focus {
+    outline: #f5b485;
+  }
+}
+
+hr {
+  margin: 0px !important;
+}
+
+.footer_submit {
+  text-align: right;
+  label {
+    margin-left: 2px;
+    font-size: 17px;
+    color: grey;
+  }
+}
+
+.footer_option {
+  font-size: 15px;
+  border-bottom: 3px solid black;
+  font-weight: bolder;
+}
+
+.footer_toggle {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  p {
+    margin: 0px;
+    font-size: 12px;
+  }
+}
