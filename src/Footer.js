@@ -34,9 +34,9 @@ class Footer extends Component {
         <div className="footer_options">
           <span className="footer_option active">Options</span>
           <div className="footer_submit">
-            <input type="checkbox" value="score" className="ml-2" />
+            <input type="checkbox" value="score" className="ml-5" />
             <label>Score</label>
-            <input type="checkbox" value="score" className="ml-2" />
+            <input type="checkbox" value="score" className="ml-3" />
             <label>Required</label>
             {button}
           </div>

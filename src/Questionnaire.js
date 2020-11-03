@@ -39,40 +39,42 @@ function Questionnaire(props) {
         <h2 style={{ textAlign: "center" }} className="mb-5 ">
           Sample Questions
         </h2>
-        <FormControl component="fieldset">
-          {props.question.map((ques, index) => (
-            <div>
-              <form>
-                <FormLabel component="legend">
-                  <span
-                    style={{
-                      textTransform: "capitalize",
-                      fontWeight: "bolder",
-                    }}
+        <ol>
+          <FormControl component="fieldset">
+            {props.question.map((ques, index) => (
+              <div>
+                <form>
+                  <FormLabel component="legend">
+                    <span
+                      style={{
+                        textTransform: "capitalize",
+                        fontWeight: "bolder",
+                      }}
+                    >
+                      <li> {ques.questions.text}</li>
+                    </span>
+                  </FormLabel>
+                  <RadioGroup
+                    aria-label={ques.questions.id}
+                    name={ques.questions.id}
+                    // value={value}
+                    onChange={(e) =>
+                      onChangeHandler(e, index, ques.questions.text)
+                    }
                   >
-                    Q{ques.questions.text}
-                  </span>
-                </FormLabel>
-                <RadioGroup
-                  aria-label={ques.questions.id}
-                  name={ques.questions.id}
-                  // value={value}
-                  onChange={(e) =>
-                    onChangeHandler(e, index, ques.questions.text)
-                  }
-                >
-                  {ques.questions.Choices.map((option) => (
-                    <FormControlLabel
-                      value={option.text}
-                      control={<Radio />}
-                      label={option.text}
-                    />
-                  ))}
-                </RadioGroup>
-              </form>
-            </div>
-          ))}
-        </FormControl>
+                    {ques.questions.Choices.map((option) => (
+                      <FormControlLabel
+                        value={option.text}
+                        control={<Radio />}
+                        label={option.text}
+                      />
+                    ))}
+                  </RadioGroup>
+                </form>
+              </div>
+            ))}
+          </FormControl>
+        </ol>
       </div>
       <div style={{ textAlign: "center", paddingBottom: "20px" }}>
         <button className="btn btn-primary" onClick={onSubmitHandler}>

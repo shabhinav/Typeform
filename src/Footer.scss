@@ -29,14 +29,14 @@ hr {
 .footer_submit {
   text-align: right;
   label {
-    margin-left: 2px;
-    font-size: 17px;
+    margin-left: 5px;
+    font-size: 15px;
     color: grey;
   }
 }
 
 .footer_option {
-  font-size: 15px;
+  font-size: 14px;
   border-bottom: 3px solid black;
   font-weight: bolder;
 }
@@ -45,8 +45,10 @@ hr {
   display: flex;
   justify-content: space-around;
   text-align: left;
+  margin-top: 20px;
   p {
     margin: 0px;
     font-size: 12px;
+    color: grey;
   }
 }
